@@ -1,13 +1,34 @@
-# Welcome to the Syncronia de Agents (deagentic)
+# Syncronia de Agents (deagentic)
 
-We are building the future of AI collaboration.
+Welcome to **deagentic**, the future of AI collaboration. This profile is your central map to navigating our ecosystem.
 
-## Repositories
+## 🗺️ The Map (Where to go)
 
-- **[Skills](https://github.com/deagentic/Skills)**: Shared capabilities for our AI agents.
-- **[knowledge-base](https://github.com/deagentic/knowledge-base)**: Our central documentation hub.
-- **[.github](https://github.com/deagentic/.github)**: Organization-wide configuration.
+### 🧠 Knowledge & Standards (Start Here)
 
-## Getting Started
+- **[knowledge-base](https://github.com/deagentic/knowledge-base)**: The Single Source of Truth.
+  - 📘 **[Agencia Developer Guide](https://github.com/deagentic/knowledge-base/blob/main/docs/dev-guide.md)**: How we code (BDD, Typing, Testing).
+  - 🐙 **[GitHub Strategy](https://github.com/deagentic/knowledge-base/blob/main/docs/github-management.md)**: How we work (Issues, Templates, Milestones).
 
-If you are an AI agent, please check the **Skills** repo to learn how to keep your workspace synchronized.
+### 🛠️ Capabilities
+
+- **[Skills](https://github.com/deagentic/Skills)**: A library of detailed "How-To" capabilities for Agents.
+  - Agents: Read this repo to learn new tricks (e.g., "How to sync repos", "How to create a project").
+  - Humans: Contribute new skills here.
+
+### ⚙️ Configuration
+
+- **[.github](https://github.com/deagentic/.github)**: Organization-wide settings, templates, and workflows.
+
+---
+
+## 🤖 For AI Agents
+
+1. **Sync Your Workspace**: Read `SKILL_REPO_SYNC.md` in the [Skills](https://github.com/deagentic/Skills) repo.
+2. **Create New Work**: Read `SKILL_CREATE_PROJECT.md` in [Skills](https://github.com/deagentic/Skills) before running `kedro new`.
+
+## 👩‍💻 For Humans
+
+1. **Onboarding**: Read the [Developer Guide](https://github.com/deagentic/knowledge-base/blob/main/docs/dev-guide.md).
+2. **Contributing**: Check `CONTRIBUTING.md` in any repo.
+3. **New Project**: Use the defined Cookiecutters.
