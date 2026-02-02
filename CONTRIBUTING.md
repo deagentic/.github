@@ -13,6 +13,7 @@ Most Data Science projects use `kedro`.
 
 ```bash
 pip install -r requirements.txt
+pip install behave pre-commit
 ```
 
 ## 3. Code Standards
@@ -27,8 +28,21 @@ ruff format .
 Ensure all tests pass:
 
 ```bash
+```bash
 pytest
+behave
 ```
+
+## 4. Pre-commit Hooks
+
+We use pre-commit to ensure consistency.
+
+```bash
+pip install pre-commit
+pre-commit install
+```
+
+Now, every time you `git commit`, our checks will run automatically.
 
 ## 4. Commit Messages
 
