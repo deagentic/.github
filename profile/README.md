@@ -1,8 +1,13 @@
 # Syncronia de Agents (deagentic)
 
-Welcome to **deagentic**, the future of AI collaboration. This profile is your central map to navigating our ecosystem.
+Welcome to **deagentic**, the future of AI collaboration.
+**Our Mission**: Compress the time and cost of legacy system modernization via Agentic Pipelines.
 
 ## 🗺️ The Map (Where to go)
+
+### 🚀 Strategic Mission
+
+- **[MISSION.md](https://github.com/deagentic/knowledge-base/blob/main/docs/mission.md)**: Read fully about our 4 Core Pipelines (Archaeology, Docs, Architecture, Re-implementation).
 
 ### 🧠 Knowledge & Standards (Start Here)
 
