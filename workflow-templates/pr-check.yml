@@ -2,15 +2,78 @@ name: Standard PR Check
 
 on:
   workflow_call:
+    inputs:
+      python-version:
+        description: "Python version to use"
+        required: false
+        type: string
+        default: "3.10"
 
 jobs:
   lint:
+    name: Lint & Format
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
-      # Add standard linting steps here
-      - run: echo "Running standard lint checks..."
+          python-version: ${{ inputs.python-version }}
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install ruff mypy types-all
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Run Ruff Linting
+        run: ruff check .
+      - name: Run Ruff Format Check
+        run: ruff format --check .
+      - name: Run Type Checking (MyPy)
+        run: mypy src/ || echo "::warning::MyPy found issues (non-blocking)"
+
+  test:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ inputs.python-version }}
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install pytest pytest-cov
+      - name: Run pytest
+        run: |
+          if [ -d tests/ ]; then
+            pytest tests/ -v --tb=short --cov=src/ --cov-report=term-missing
+          else
+            echo "::notice::No tests/ directory found. Skipping pytest."
+          fi
+
+  bdd:
+    name: BDD Acceptance Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ inputs.python-version }}
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install behave
+      - name: Run behave
+        run: |
+          if [ -d features/ ]; then
+            behave features/
+          else
+            echo "::notice::No features/ directory found. Skipping BDD tests."
+          fi
