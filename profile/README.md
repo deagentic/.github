@@ -1,4 +1,4 @@
-# Syncronia de Agents (deagentic)
+# Deagentic
 
 Welcome to **deagentic**, the future of AI collaboration inside the DeAcero Group.
 **Our Mission**: Compress the time and cost of legacy system modernization via Agentic Pipelines.
