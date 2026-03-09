@@ -41,7 +41,7 @@ Welcome to **deagentic**, the future of AI collaboration inside the DeAcero Grou
 
 ## For Humans
 
-1. **Onboarding**: Read the [project wiki](https://github.com/deagentic/agentic-engineering/refs/heads/main/docs/wiki.md) And then, [Developer Guide](https://github.com/deagentic/knowledge-base/blob/main/docs/dev-guide.md).
+1. **Onboarding**: Read the [project wiki](https://github.com/deagentic/agentic-engineering/blob/main/docs/wiki.md) And then, [Developer Guide](https://github.com/deagentic/knowledge-base/blob/main/docs/dev-guide.md).
 2. **Contributing**: Check `CONTRIBUTING.md` in any repo.
 3. **New Project**: Use the defined [Cookiecutters](https://github.com/deagentic/knowledge-base/blob/main/docs/cookiecutter-standards.md).
 4. **Questions?**: Open a [Discussion](https://github.com/deagentic/.github/discussions).
